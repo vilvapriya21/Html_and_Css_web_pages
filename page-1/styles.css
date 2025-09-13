@@ -91,3 +91,23 @@ body
         } 
     }
 }
+
+/*responsiveness*/
+@media (max-width:768px)
+{
+    .menu{
+        .menu_title{
+            font-size:2em;
+        }
+        .coffee
+        {
+            grid-template-columns: repeat(1,1fr);
+            margin-inline: 2%;
+            .box{
+                .coffee_img{
+                    height:200px;
+                } 
+            }
+        }
+    }
+}
