@@ -6,7 +6,7 @@
 body
 {
     background:linear-gradient(to right, white, rgb(232, 164, 115));
-    font-family: sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
 }
 .navbar
 {
@@ -14,7 +14,7 @@ body
     background:linear-gradient( to left,white,chocolate);
     box-shadow: 0 0 5px gray;   
     
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
 
@@ -23,7 +23,10 @@ body
     justify-content:space-around;
     align-items: center;
     
-
+    a{
+        color:black;
+        text-decoration: none;
+    }
     .about{
         display: flex;
         justify-content: space-between;
@@ -130,10 +133,54 @@ body
     }
 }
 
+.about-section
+{
+    margin: 2em 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: justify;
+    gap:1em;
+
+    .about-title{
+        color:#4e342e;
+        font-size: clamp(2rem, 4vw, 3rem);
+    }
+
+}
+
+form{
+    
+    margin:5% 20%;
+    display:grid;
+    grid-template-columns: 1fr;
+    gap:2em;
+
+    label{
+        font-size: clamp(1.5rem, 3vw, 2.5rem);
+        font-weight: bold;
+        color:#4e342e;
+        text-align: center;
+    }
+
+    input,textarea{
+        padding:0.7em;
+        border:none;
+        border-radius: 0.5em;
+        box-shadow: 0 0 5px gray;
+    }
+
+    .message{
+       border-radius: 5px;
+       box-shadow: 0 0 5px gray;
+    }
+
+}
 .footer
 {
- 
-    color:#4e342e;
+    background:linear-gradient( to bottom,#d57965,rgb(239, 160, 90));;
+    color:white;
     text-align: center;
     padding:1em;    
 }
@@ -143,15 +190,20 @@ body
 {
     .hero-img {
         content: url('../assets/b1.jpg'); 
-        object-fit: contain;
+        object-fit: cover;
     }
     .menu .coffee
     {
         grid-template-columns: 1fr 1fr;
     }
+    
 }
 @media (max-width:426px)
 {
+    .hero-img {
+        content: url('../assets/b2.jpg'); 
+        object-fit: cover;
+    }
     .menu .coffee
     {
         grid-template-columns: 1fr;
@@ -164,4 +216,16 @@ body
         justify-content: space-between; 
         padding: 1em;
     }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* adjust this value to match your navbar height */
+:root { --nav-height: 80px; }
+
+#menu,
+#about {
+  scroll-margin-top: var(--nav-height);
 }
