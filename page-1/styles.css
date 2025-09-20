@@ -8,6 +8,7 @@ body
     background:linear-gradient(to right, white, rgb(232, 164, 115));
     font-family:Arial, Helvetica, sans-serif;
 }
+
 .navbar
 {
     padding:1em;
@@ -228,4 +229,26 @@ html {
 #menu,
 #about {
   scroll-margin-top: var(--nav-height);
+}
+
+/*tooltip Css*/
+.tooltip {
+  position: relative;       /* so the tooltiptext can be positioned relative to it */
+  display: inline-block;    /* keep it inline like a normal link */
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;       /* hide by default */
+  width: 120px;             /* width of the tooltip */
+  background-color: black;  /* tooltip background */
+  color: white;             /* text color */
+  text-align: center;       /* center the text */
+  padding: 5px;
+  border-radius: 4px;
+}
+
+/* Show tooltip on hover */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
