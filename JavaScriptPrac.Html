@@ -4,12 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <title>Document</title>
+    <script src="script.js" defer>
+        alert("Welcome to my website");
+    </script>
 </head>
 <body>
     <h1>Helloooo</h1>
+    <p id="para"></p>
     <script>
-        alert("Welcome to my website");
-        console.log("Hello World");
+        document.getElementById("para").innerText="This is my first javascript code";
+        document.getElementById("para").innerHTML="<h1>Vilva</h1>";
+        document.write("<h2>using write</h2>");       
+        // console.log("Hello World");
+        // console.warn("This is a warning");
+        // console.error("Something went wrong!");
     </script>
 </body>
 </html>
